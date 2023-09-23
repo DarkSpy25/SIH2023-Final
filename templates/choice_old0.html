@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='css/style.css') }}">
+    <style>
+         @import url('https://fonts.googleapis.com/css?family=Raleway'); 
+        body {
+            background-image: url({{ url_for('static', filename='images/medicine.webp') }}); /* Replace 'background.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            
+            background-size: 100% 100%; /* Stretch the image to cover the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; 
+            /* Optionally, you can add more CSS styles here */
+        }
+
+        /* Style for the buttons */
+        button {
+            background-color: #333333; /* Green background color */
+            color: white; /* White text color */
+            border: none; /* Remove the border */
+            padding: 10px 20px; /* Add some padding */
+            margin: 5px; /* Add margin */
+            cursor: pointer; /* Change cursor on hover */
+            width: 40%;
+            height:10vh;
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            border-radius: 5px;
+
+        }
+
+        
+
+        /* Style for the buttons on hover */
+        button:hover {
+            background-color: #555;        }
+    </style>
+    
+</head>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Choose an Option</h1>
+        <div class="options">
+            <button onclick="showChoice('a')">Click here if your database is hosted on a cloud platform!</button>
+            <button onclick="showChoice('b')">Click here if your database is hosted remotely!</button>
+        </div>
+
+        <div id="choice-a" class="hidden">
+            <h2>Cloud database</h2>
+            <form>
+                Enter your IP address:
+                <input type="text" placeholder="23:45:78:16">
+                Enter remote username:
+                <input type="text" placeholder="username_23">
+                Enter a password:
+                <input type="password" placeholder="password">
+                
+                <button type="button" onclick="simulateProgressBar()">Submit</button>
+                
+            </form>
+        </div>
+
+        <div id="choice-b" class="hidden">
+            <h2>Local Database</h2>
+            <form action="/visualization" method="post">
+                <button type="button" onclick="simulateProgressBar()">Upload</button>
+            </form>
+
+        </div>
+
+        <div id="result" class="hidden">
+            <div class="progress">
+                <div class="bar"></div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </main>
+</body>
+</html>

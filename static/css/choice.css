@@ -1,0 +1,169 @@
+/* Basic Styles */
+@import url('https://fonts.googleapis.com/css?family=Raleway'); 
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image:url("medicine.webp"); /* Replace 'background.jpg' with your desired image file */
+    background-size: cover ;
+    background-position: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+
+    background-size: 100% 100%; /* Stretch the image to cover the entire background */
+background-repeat: no-repeat; /* Prevent the image from repeating */
+background-attachment: fixed; 
+    
+}
+
+header {
+    /* background-color: #09706b; */
+    background-color: #333333;
+    padding: 10px 5px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hidden Form and Result Styles */
+.hidden {
+    display: none;
+}
+
+/* Fancy Styles (customize as needed) */
+.login-signup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.options {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+#button-upload{
+    margin-top: 75px;
+    font-family: 'Raleway', sans-serif;
+}
+button {
+    background-color: #333;
+    font-size: medium;
+    color: white;
+    /* align-self: center; */
+    /* vertical-align: middle; */
+    padding: 20px 20px;
+    padding-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin: 50%; */
+    margin-top: 40%;
+}
+
+.progress {
+    width: 100%;
+    background-color: #ccc;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.bar {
+    width: 0;
+    height: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    animation: progress 2s linear forwards;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+.contentt{
+    font-family: 'Raleway', sans-serif;
+    font-size: larger;
+    font-weight: bolder ;
+    padding-top: 20%;
+    color: #000;
+}
+.option-card {
+
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(255,255,255,0.2);
+    /* opacity: 0.5; */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px; /* Added margin for spacing between cards */
+    height: 350px;
+    width: 400px; /* Adjust card width as needed */
+    text-align: center;
+    display: inline-block; /* Cards displayed side by side */
+    cursor: pointer; /* Add pointer cursor for interactivity */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Add transitions for smooth hover effects */
+}
+
+.option-card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+}
+
+.option-card h2 {
+    margin-bottom: 10px;
+}
+
+.option-card form {
+    display: flex;
+    flex-direction: column;
+}

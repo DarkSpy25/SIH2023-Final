@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+
+    <style>
+        
+        body{
+            background-image: url({{ url_for('static', filename='images/medicine.webp') }});
+          } 
+    </style>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</head>
+
+<body >
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to Nasha Mukti, One-stop solution to database integration!</h1>
+        <div class="logincard">
+            <div class="leftcard">
+                <h2>Sign Up</h2>
+                <p>New here? Register below.</p>
+                <form method="post" action="/">
+                <button  type="submit" value="register" name="reg">Sign Up</button>
+                </form>
+            </div>
+            
+            <div class="leftcard">
+                <h2>Login</h2>
+                <p>Already a user? Login below.</p>
+                <form method="post" action="/">
+                <button  type="submit" value="login" name="log">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="signup-form" class="hidden">
+            <h2>Register</h2>
+            <form>
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button type="submit" onclick="signup()">Submit</button>
+            </form>
+        </div>
+
+        <div id="login-form" class="hidden">
+            <h2>Login</h2>
+            <form action="choice.html" method="get" id="login-form">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+    </main>
+</body>
+
+</html>

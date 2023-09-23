@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/deets.css') }}">
+<style>
+	
+
+body {
+	background-image: url({{ url_for('static', filename='images/medicine.webp') }});
+}
+
+</style>
+<div class="wrapper">
+
+	<div class="login-box">
+		<h3 class="info-text">User Registration</h3>
+		<form class="form-container" action="/signup" method="post">
+			<div class="input-addon">
+				<input class="form-element input-field" placeholder="Name" type="text" name="name">
+				<button class="input-addon-item">
+					<span class="fa fa-user"></span>
+				</button>
+				
+			</div>
+			<div class="input-addon">
+				<input class="form-element input-field" placeholder="Email" type="email" name="email">
+				<button class="input-addon-item">
+					<span class="fa fa-envelope"></span>
+				</button>
+			</div>
+			<div class="input-addon">
+				<input class="form-element input-field" placeholder="Password" type="password" name="passw">
+				<button class="input-addon-item">
+					<span class="fa fa-lock"></span>
+				</button>
+			</div>
+			<!-- <div class="input-addon">
+				<input class="form-element input-field" placeholder="Re-type password" type="password">
+				<button class="input-addon-item">
+					<span class="fa fa-lock"></span>
+				</button>
+			</div> -->
+			
+			<input class="form-element is-submit" type="submit" name ="regbutton" value="Create User">
+		</form>
+		<p>Or if you already have an user <a href="#">login here.</a></p>
+	</div>
+</div>

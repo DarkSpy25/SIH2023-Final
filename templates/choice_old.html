@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Choose an Option</h1>
+        <div class="options">
+            <button onclick="showChoice('a')">Click here if your database is hosted on cloud platform!</button>
+            <button onclick="showChoice('b')">Click here if your database is hosted remotely!</button>
+        </div>
+        <div>
+            
+        </div>
+
+        <div id="choice-a" class="hidden">
+            <h2>Cloud database</h2>
+            <form>
+                Enter your IP address:
+                <input type="text" placeholder="23:45:78:16">
+                Enter remote username:
+                <input type="text" placeholder="username_23">
+                Enter password:
+                <input type="password" placeholder="password">
+               
+            </form>
+        </div>
+
+        <div id="choice-b" class="hidden">
+            <h2>Local Database</h2>
+            <form enctype="multipart/form-data">
+                <input type="file">
+                <button type="button" onclick="simulateProgressBar()">Upload</button>
+            </form>
+        </div>
+
+        <div id="result" class="hidden">
+            <div class="progress">
+                <div class="bar"></div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </main>
+</body>
+</html>
